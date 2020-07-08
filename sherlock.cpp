@@ -6,27 +6,27 @@ using namespace std;
 bool checkPermutation(string s1, string s2)
 {
     unordered_map<char, int> exist;
-    for(int i=0; i<s1.size();i++)
+    for(int i=0; i<s2.size();i++)
     {
-        if(exist.count(s1[i]) > 0)
+        if(exist.count(s2[i]) > 0)
         {
-            exist[s1[i]]++;
+            exist[s2[i]]++;
         }
         else
         {
-            exist[s1[i]] = 1;
+            exist[s2[i]] = 1;
         }
     }
 
-    for(int i=0; i<s2.size();i++)
+    for(int i=0; i<s1.size();i++)
     {
-        if(exist.count(s2[i]) == 0)
+        if(exist.count(s1[i]) == 0)
         {
             return false;
         }
         else
         {
-            exist[s2[i]]--;
+            exist[s1[i]]--;
         }
     }
 
