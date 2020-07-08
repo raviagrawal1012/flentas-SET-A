@@ -20,7 +20,7 @@ bool checkPermutation(string s1, string s2)
 
     for(int i=0; i<s1.size();i++)
     {
-        if(exist.count(s1[i]) == 0)
+        if(exist[s1[i]] == 0)
         {
             return false;
         }
